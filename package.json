@@ -1,0 +1,25 @@
+{
+  "name": "dunims",
+  "version": "1.0.0",
+  "description": "email client for browser",
+  "main": "app.js",
+  "scripts": {
+    "test": "app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigolf080/dunims.git"
+  },
+  "keywords": [
+    "email"
+  ],
+  "author": "trevalkov",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/rodrigolf080/dunims/issues"
+  },
+  "homepage": "https://github.com/rodrigolf080/dunims#readme",
+  "dependencies": {
+    "my-sql": "^1.2.15"
+  }
+}
