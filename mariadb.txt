@@ -1,6 +1,9 @@
 # Check mariadb used port
 $ sudo netstat -tlpn | grep mariadb
 
+# Login with user account
+$ mysql -u dunims -p
+
 # Secure installation
 $ mysql_secure_installation
 
