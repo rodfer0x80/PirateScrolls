@@ -1,0 +1,15 @@
+# Post without data
+$ curl -X POST http://localhost:8080/
+
+# Post with data
+$ curl -d "data" POST http://localhost:8080/
+
+# Post to a form
+$ curl -X POST -F "name=users" ""http://localhost:8080/
+
+# Post with a file
+$ curl -X -F "image=@/path/dunims.gif" POST http://localhost:8080/
+
+# Post JSON data
+$ curl -H "Content-Type: application/json" -X POST -d '("users":"denims",
+"pass":"123")' "http://localhost:8080/

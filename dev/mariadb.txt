@@ -1,0 +1,19 @@
+# Check mariadb used port
+$ sudo netstat -tlpn | grep mariadb
+
+# Login with user account
+$ mysql -u dunims -p
+
+# Secure installation
+$ mysql_secure_installation
+
+# Check process
+$ sudo systemctl status mariadb
+
+# Start process
+$ sudo systemctl start mariadb
+$ sudo systemctl stop mariadb
+
+# Start process on reboot
+$ sudo systemctl enable mariadb
+$ sudo systemctl disable mariadb
