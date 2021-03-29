@@ -27,9 +27,9 @@ const  con = mysql.createPool({
   debug: false
 });
 
-let papers = "";
+var papers = [];
 // Return Users table when '/papers' page is visited
-function returnUsers(request, response){
+function returnPapers(request, response){
   let sql ="SELECT * FROM papers";
   con.query(sql, (err, result) => {
     if (err) {
@@ -40,8 +40,8 @@ function returnUsers(request, response){
   });
   let pathArray = request.url.split("/");
   let pathEnd = pathArray[pathArray.length - 1];
-  if (pathEnd == 'papers') {
-    response.send(papers);
+  if (pathEnd == 'papers'){
+     response.send(papers);
   } else {
 
     response.send("{error: 'Path not found'}");
@@ -64,10 +64,10 @@ function addUser(request, response){
 // Handle GET requests
 // Root path
 app.get("/", function(req, res){
-  res.render("paddleshooter")
+  res.render("index")
 });
 // users path
-app.get("/papers", returnUsers);
+app.get("/papers", returnPapers);
 
 // Handle POST requests
 // Root path
