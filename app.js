@@ -21,10 +21,10 @@ app.set("view engine", "ejs");
 const  con = mysql.createPool({
   connectionLimit: 1,
   host: "localhost",
-  user: "root",
-  password: "1$cGFzc3dk",
+  user: "dunims",
+  password: "SecurePasswd!",
   database: "dunims",
-  debug: true
+  debug: false
 });
 
 let papers = "";
@@ -51,13 +51,13 @@ function returnUsers(request, response){
 // Add user to table when '/users' page is posted to
 function addUser(request, response){
   let newUser = request.body.data;
-  let sql = "INSERT INTO papers (title,author,organisation) VALUES ('Unified Field Theory','trevalkov', 'MIT');"
+  let sql = "INSERT INTO papers (title,year,author,organisation) VALUES ('Unified Field Theory',2021,'trevalkov', 'MIT');"
   //"INSERT INTO users(email) values('" + newUser + "');";
   con.query(sql, (err, result) => {
   if (err){
     console.error("Error executing query: " + JSON.stringify(err));
   } else {
-    response.send("User added successfully.")
+    response.send("Paper added successfully.")
   }})
 }
 
@@ -78,8 +78,8 @@ app.get("*", function(req, res){
 });
 //Listen on port <port_number>
 var httpServer = http.createServer(app);
-httpServer.listen(80, function(){ 
-  console.log("\nHTTP Serving on PORT 80");
+httpServer.listen(8080, function(){
+  console.log("\nHTTP Serving on PORT 8080");
   console.log("MYSQL Database Connected");
   exec('python3 dev/greeting.py', (err,stdout,stderr) => {
     if (err){
