@@ -4,6 +4,7 @@ table {
   background-color: #151515;
 	width: 100%;
   color: white;
+  white-space:pre-warp;
 }
 
 th {
@@ -48,4 +49,7 @@ a{
 }
 a:visited{
   color: gray;
+}
+.disclaimer{
+  text-align: center;
 }

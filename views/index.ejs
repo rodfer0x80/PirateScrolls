@@ -9,6 +9,7 @@
 <table>
   <thead>
     <tr>
+      <th> ID </th>
       <th> Title </th>
       <th> Year </th>
       <th> Author </th>
@@ -16,13 +17,24 @@
     </tr>
   </thead>
   <tbody>
+   <%
+   if(paperData.length!=0){
+   var i=1;
+   paperData.forEach(function(data){
+    %>
     <tr>
-      <td> <a href="/files/paper1.pdf">Theory of Everything</a></td>
-      <td> 2021 </td>
-      <td> trevalkov </td>
-      <td> N/A </td>
+      <td> <%=i; %></td>
+      <td><a href='/files/paper<%=i%>.pdf'><%=data.title%> </a></td>
+      <td> <%=data.year %></td>
+      <td> <%=data.author %></td>
+      <td> <%=data.organisation %></td>
     </tr>
+      <% i++; }) %>
+      <% } else { %>
+        <tr>
+          <td colspan="4"> No Data Found</td>
+        </tr>
+      <% } %>
   <tbody>
 </table>
-
 <%- include("partials/footer") %>
