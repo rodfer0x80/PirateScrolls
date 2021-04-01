@@ -1,0 +1,41 @@
+<%- include("partials/header") %>
+
+<div class="banner">
+    <h1> Dunims </h1>
+    <hr/>
+</div>
+<p>Only academic papers. No ads, no tracking, nothing but academic papers.</p>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th> Title </th>
+      <th> Year </th>
+      <th> Author </th>
+      <th> Organisation </th>
+    </tr>
+  </thead>
+  <tbody>
+  <%
+  if(paperData.length!=0){
+  var i=1;
+  paperData.forEach(function(data){
+  %>
+    <tr>
+      <td> <%=i; %></td>
+      <td><<%=data.title %></td>
+      <td> <%=data.year %></td>
+      <td> <%=data.author %></td>
+      <td> <%=data.organisation %></td>
+    </tr>
+    <% i++; }) %>
+    <% } else { %>
+      <tr>
+        <td colspan="4"> No Data Found</td>
+      </tr>
+    <% } %>
+  <tbody>
+</table>
+
+<%- include("partials/footer") %>

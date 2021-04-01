@@ -1,0 +1,51 @@
+table {
+	border-collapse: collapse;
+	border: 1.5px white solid;
+  background-color: #151515;
+	width: 100%;
+  color: white;
+}
+
+th {
+	height: 30px;
+	border: 1px white solid;
+	text-align: left;
+  padding: 10px;
+  background-color: #000000 ;
+}
+
+td {
+	text-align: center;
+	border: 1px white solid;
+  padding: 10px;
+}
+
+tr:hover {
+  background-color: #000000 ;
+}
+
+
+.banner {
+  text-align: center;
+  color: #ffffff
+}
+
+p{
+  color: #ffffff;
+}
+
+body {
+	background: #151515 ;
+	color: white ;
+	max-width: 800px ;
+	margin: auto ;
+	padding: 0 16px ;
+	margin-bottom: 500px ;
+	font-family: sans-serif ;
+}
+a{
+  color: lightblue;
+}
+a:visited{
+  color: gray;
+}

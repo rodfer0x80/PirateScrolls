@@ -1,0 +1,33 @@
+ 33 // Return Users table when '/papers' page is visited
+ 34 function returnPapers(request, response){
+ 35   let sql ="SELECT * FROM papers";
+ 36   con.query(sql, (err, result) => {
+ 37     if (err) {
+ 38       console.error("Error executing query: " + JSON.stringify(err));
+ 39     } else {
+ 40         papers = JSON.stringify(result);
+ 41     }
+ 42   });
+ 43   let pathArray = request.url.split("/");
+ 44   let pathEnd = pathArray[pathArray.length - 1];
+ 45   if (pathEnd == 'papers'){
+ 46      response.send(papers);
+ 47   } else {
+ 48
+ 49     response.send("{error: 'Path not found'}");
+ 50   }
+ 51 }
+ 52
+ 53 // Add user to table when '/users' page is posted to
+ 54 function addUser(request, response){
+ 55   let newUser = request.body.data;
+ 56   let sql = "INSERT INTO papers (title,year,author,organisation) VALUES ('Unifie
+ 57   //"INSERT INTO users(email) values('" + newUser + "');";
+ 58   con.query(sql, (err, result) => {
+ 59   if (err){
+ 60     console.error("Error executing query: " + JSON.stringify(err));
+ 61   } else {
+ 62     response.send("Paper added successfully.")
+ 63   }})
+ 64 }
+
