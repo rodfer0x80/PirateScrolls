@@ -1,10 +1,10 @@
 #!/bin/bash
 
-user="dunims"
+user="trevalkov"
 pass="SecurePasswd!"
-db="dunims"
+db="PirateScrolls"
 
-echo "Dunims - Delete Menu"
+echo "PirateScrolls - Delete Menu"
 echo "0) Go back"
 echo "1) Delete object by ID"
 read -p ">> " c

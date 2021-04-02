@@ -1,4 +1,6 @@
 #!/bin/bash
+echo -e "\n\nPirateScrolls Admin"
+echo "********************"
 echo "0) Quit program"
 echo "1) Start database"
 echo "2) Stop database"
@@ -6,7 +8,8 @@ echo "3) Enable database on reboot"
 echo "4) Disable database on reboot"
 echo "5) Check database status"
 echo "6) Check database port"
-echo "7) Secure installation"
+echo "7) Dump database"
+echo "8) Secure installation"
 read -p ">> " c
 if [ "$c" == 0 ];then
   echo "Gracefully quitting..."
@@ -24,6 +27,8 @@ elif [ "$c" == 5 ];then
 elif [ "$c" == 6 ];then
   doas netstat -ltpn | grep mariadb
 elif [ "$c" == 7 ];then
+  ./dump_db.sh
+elif [ "$c" == 8 ];then
   mysql_secure_installation
 else
   echo "Command not found, quitting..."

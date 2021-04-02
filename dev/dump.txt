@@ -1,0 +1,7 @@
+# dump
+#mysqldump -u trevalkov -pSecurePasswd! -R PirateScroll > PirateScroll.sql
+# create new database
+#mysqladmin -u trevalkov -pSecurePasswd! create <name>
+# import dump into new database
+#mysql -u trevalkov -pSecurePasswd! PirateScroll < PirateScroll.sql
+# delete database -u trevalkov -pSecurePasswd! drop <name>

@@ -1,14 +1,13 @@
 #!/bin/bash
 
-user="dunims"
+user="trevalkov"
 pass="SecurePasswd!"
-db="dunims"
+db="PirateScrolls"
 
 while read line
 do
   id=$line
 done < .env
-echo "$id"
 
 echo "Dunims - Insert Menu"
 echo "0) Go back"

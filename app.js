@@ -20,9 +20,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 var mysql = require('mysql');
 var con = mysql.createConnection({
   host: "localhost",
-  user: "dunims",
+  user: "trevalkov",
   password: "SecurePasswd!",
-  database: "dunims",
+  database: "PirateScrolls",
 });
 con.connect(function(err) {
   if (err) throw err;

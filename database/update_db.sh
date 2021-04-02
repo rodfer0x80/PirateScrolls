@@ -1,10 +1,10 @@
 #!/bin/bash
 
-user="dunims"
+user="trevalkov"
 pass="SecurePasswd!"
-db="dunims"
+db="PirateScrolls"
 
-echo "Dunims - Update Menu"
+echo "PirateScrolls - Update Menu"
 echo "0) Go back"
 echo "1) Edit object by ID"
 read -p ">> " c

@@ -1,10 +1,10 @@
 #!/bin/bash
 
-user="dunims"
+user="trevalkov"
 pass="SecurePasswd!"
-db="dunims"
+db="PirateScrolls"
 table="papers"
 
-echo "Dunims - Academic Papers"
+echo "PirateScrolls - Academic Papers"
 q="SELECT * FROM papers"
 mysql --user=$user --password=$pass $db -e "$q"

@@ -1,3 +1,0 @@
-shell script as interface to manage database uploads
-upload more examples of data to test
-implement https protocol

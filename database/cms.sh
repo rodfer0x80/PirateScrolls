@@ -3,7 +3,7 @@
 #Description: Manage MariaDB (CRUD)
 while [ 1 ]
 do
-  echo -e "\n\nDunims - Control Management System"
+  echo -e "\n\nPirateScrolls - Control Management System"
   echo "***********************************"
   echo "0) Quit Program"
   echo "1) Insert paper"
