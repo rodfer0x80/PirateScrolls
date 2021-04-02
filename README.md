@@ -7,7 +7,7 @@ Born to provide online academic papers without ads, tracking or bloat web design
 
     All respect is due to the authors of such academic papers and publications.
     All papers are in pdf format published online by the author(s)
-    You can find the author and organisations involved in the paper in the table of contents and inside pdf file.
+    You can find the author and organisations involved in the paper in the table of contents and inside pdf the file.
 
 
 Project
