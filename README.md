@@ -28,10 +28,7 @@ GNU tools
 \n(javascript only to query database, run server and request data from database to the client)
 
 -- Control
-:: The control folder holds the scripts: //
-run -- starts server :: nodemon app.js //
-database_cms -- manage database :: CRUD CLI interface //
-admin_cms -- run database functions :: database commands in shell 
+:: The control folder holds the scripts: //run -- starts server :: nodemon app.js //database_cms -- manage database :: CRUD CLI interface //admin_cms -- run database functions :: database commands in shell 
 
 -- Dependencies
 :: Nodejs npm dependencies can be found at package.json.
