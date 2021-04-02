@@ -26,7 +26,7 @@ var con = mysql.createConnection({
 });
 con.connect(function(err) {
   if (err) throw err;
-  console.log("MySQL is connected successfully");
+  console.log("MySQL Database");
 })
 
 app.get('/', function(req, res, next){
@@ -44,7 +44,7 @@ app.get("*", function(req, res){
 
 // Listen on port 8080 for HTTP requests
 app.listen(8080, function(){
-  console.log("\nHTTP Serving on PORT 8080");
+  console.log("\nHTTP Server PORT 8080");
   exec('python3 ./dev/greeting.py', (err,stdout,stderr) => {
   if (err){
       return 0;
