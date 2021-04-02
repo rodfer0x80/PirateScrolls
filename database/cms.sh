@@ -6,8 +6,8 @@ do
   echo -e "\n\nDunims - Control Management System"
   echo "***********************************"
   echo "0) Quit Program"
-  echo "1) Add paper"
-  echo "2) Remove paper"
+  echo "1) Insert paper"
+  echo "2) Delete paper"
   echo "3) Update paper"
   echo "4) Display papers"
   read -p ">> " c
@@ -15,12 +15,16 @@ do
     echo "Gracefully quitting..."
     exit
   elif [ "$c" == 1 ];then
-    echo "Add"
+    echo -e "\n\n"
+    ./insert_db.sh
   elif [ "$c" == 2 ];then
-    echo "Delete"
+    echo -e "\n\n"
+    ./delete_db.sh
   elif [ "$c" == 3 ];then
-    echo "Update"
+    echo -e "\n\n"
+    ./update_db.sh
   elif [ "$c" == 4 ];then
+    echo -e "\n\n"
     ./display_db.sh
   else
     echo "Command not found."
