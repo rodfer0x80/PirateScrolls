@@ -1,0 +1,4 @@
+:: Todo
+1. Allow Github paper contributions
+2. Javascript, HTML and CSS testing
+3. Project report
