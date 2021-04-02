@@ -1,4 +1,5 @@
 :: Todo
-1. Allow Github paper contributions
+1. Improve code documentation
 2. Javascript, HTML and CSS testing
 3. Project report
+4. Allow Github paper contributions
