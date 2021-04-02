@@ -23,14 +23,14 @@ To index the world OSINT
 Nodejs and npm
 MariaDB/MySQL
 GNU tools
-Bash/Shell/ZShell
-Python2 or Python3 (can also run without python so it is not required)
-(javascript only to query database, run server and request data from database to the client)
+\nBash/Shell/ZShell
+\nPython2 or Python3 (can also run without python so it is not required)
+\n(javascript only to query database, run server and request data from database to the client)
 
--- Control
-:: The control folder holds the scripts:
-run -- starts server :: nodemon app.js
-database_cms -- manage database :: CRUD CLI interface
+\n-- Control
+\n:: The control folder holds the scripts:
+\nrun -- starts server :: nodemon app.js
+\ndatabase_cms -- manage database :: CRUD CLI interface
 admin_cms -- run database functions :: database commands in shell
 
 -- Dependencies
