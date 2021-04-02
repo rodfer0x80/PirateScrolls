@@ -31,5 +31,5 @@ GNU tools
 :: The control folder holds the scripts: //run -- starts server :: nodemon app.js //database_cms -- manage database :: CRUD CLI interface //admin_cms -- run database functions :: database commands in shell 
 
 -- Dependencies
-:: Nodejs npm dependencies can be found at package.json.
+:: Nodejs npm dependencies can be found at package.json
 :: GNU tools for mysql/mariadb and unix shell functionality
