@@ -45,7 +45,7 @@ app.get("*", function(req, res){
 // Listen on port 8080 for HTTP requests
 app.listen(8080, function(){
   console.log("\nHTTP Serving on PORT 8080");
-  exec('python3 greeting.py', (err,stdout,stderr) => {
+  exec('python3 ./dev/greeting.py', (err,stdout,stderr) => {
   if (err){
       return 0;
   }

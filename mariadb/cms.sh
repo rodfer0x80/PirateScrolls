@@ -1,13 +1,15 @@
 #!/bin/bash
-mysql -u dunims -p
+#Filename:cms.sh
+#Description: Manage MariaDB (CRUD)
 while [ 1 ]
 do
-  echo  "Dunims Control Management System"
-  echo "*********************************"
+  echo -e "\n\nDunims - Control Management System"
+  echo "***********************************"
   echo "0) Quit Program"
   echo "1) Add paper"
   echo "2) Remove paper"
-  echo "3) Updatepaper"
+  echo "3) Update paper"
+  echo "4) Display papers"
   read -p ">> " c
   if [ "$c" == 0 ];then
     echo "Gracefully quitting..."
@@ -18,6 +20,8 @@ do
     echo "Delete"
   elif [ "$c" == 3 ];then
     echo "Update"
+  elif [ "$c" == 4 ];then
+    ./display_db.sh
   else
     echo "Command not found."
   fi
