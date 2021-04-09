@@ -1,0 +1,26 @@
+#!/bin/bash
+cd ../public
+while [ 1 ]
+do
+  echo -e "\n\nPirateScrolls Papers"
+  echo "********************"
+  echo "0) Quit program"
+  echo "1) Compress papers"
+  echo "2) Set up papers"
+  read -p ">> " c
+  if [ "$c" == 0 ];then
+    echo "Gracefully quitting..."
+    exit
+  elif [ "$c" == 1 ];then
+    7z a -mx=9 papers.7z files
+    rm -rf files
+  elif [ "$c" == 2 ];then
+    7z e papers.7z
+    rm -rf papers.7z
+    mv paper* files
+  else
+    echo "Command not found, quitting..."
+  fi
+done
+
+

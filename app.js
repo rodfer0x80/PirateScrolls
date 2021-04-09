@@ -24,7 +24,7 @@ var con = mysql.createConnection({
 });
 con.connect(function(err) {
   if (err) throw err;
-  console.log("MySQL Database");
+  console.log("MySQL Database (MariaDB)");
 })
 
 app.get('/', function(req, res, next){
@@ -42,5 +42,5 @@ app.get("*", function(req, res){
 
 // Listen on port 8080 for HTTP requests
 app.listen(8080, function(){
-  console.log("\nHTTP Server PORT 8080");
+  console.log("\nHTTP Serving on PORT 8080");
 });

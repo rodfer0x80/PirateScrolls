@@ -1,0 +1,1 @@
+npm i body-parser ejs express mysql nodemon path
