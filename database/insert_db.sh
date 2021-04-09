@@ -9,7 +9,7 @@ do
   id=$line
 done < .env
 
-echo "Dunims - Insert Menu"
+echo "PirateScrolls - Insert Menu"
 echo "0) Go back"
 echo "1) Choose CSV file"
 read -p ">> " c
@@ -23,7 +23,6 @@ elif [ "$c" == 1 ];then
   echo "Enter name of the the PDF paper"
   echo "e.g. contributing/paper.pdf"
   read -p ">> " p
-  #mv $p ../public/files
   while IFS="," read -r rec_column1 rec_column2 rec_column3 rec_column4
   do
     echo "Title: $rec_column1"
