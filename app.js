@@ -42,6 +42,7 @@ res.send("404 Page Not Found")
 });
 
 // Listen on port 8080 for HTTP requests
-app.listen(8080, function(){
+app.listen(8080, function(err){
+  if (err) throw err;
   console.log("\nHTTP Serving on PORT 8080");
 });
