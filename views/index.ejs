@@ -1,38 +1,32 @@
 <%- include("partials/header") %>
 
-<div class="banner">
-    <h1> PirateScrolls </h1>
-    <hr/>
-</div>
-<p><a href="#about">About</a> - Only academic papers. no ads, no tracking</p>
-<br>
-<table>
-  <thead>
-    <tr>
-      <th> Title </th>
-      <th> Year </th>
-      <th> Author </th>
-      <th> Organisation </th>
-    </tr>
-  </thead>
-  <tbody>
-   <%
-   if(paperData.length!=0){
-   var i=1;
-   paperData.forEach(function(data){
-    %>
-    <tr>
-      <td><a href='/files/paper<%=i%>.pdf'><%=data.title%> </a></td>
-      <td> <%=data.year %></td>
-      <td> <%=data.author %></td>
-      <td> <%=data.organisation %></td>
-    </tr>
+  <table>
+    <thead>
+      <tr>
+        <th> Title </th>
+        <th> Year </th>
+        <th> Author </th>
+        <th> Organisation </th>
+      </tr>
+    </thead>
+    <tbody>
+      <%
+        if(paperData.length!=0){
+        var i=1;
+        paperData.forEach(function(data){
+      %>
+      <tr>
+        <td><a href='/files/paper<%=i%>.pdf'><%=data.title%> </a></td>
+        <td> <%=data.year %></td>
+        <td> <%=data.author %></td>
+        <td> <%=data.organisation %></td>
+      </tr>
       <% i++; }) %>
       <% } else { %>
-        <tr>
-          <td colspan="4"> No Data Found</td>
-        </tr>
+      <tr>
+        <td colspan="4"> No Data Found</td>
+      </tr>
       <% } %>
-  <tbody>
-</table>
+    <tbody>
+  </table>
 <%- include("partials/footer") %>

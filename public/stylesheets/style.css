@@ -1,3 +1,28 @@
+/* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #151515;
+  color: #ffffff;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  background-color: #151515;
+  padding: 8px 12px;
+  text-align: center;
+  margin-top: 14px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.topnav a:hover {
+  color: #ffffff;
+  border: 1px white solid;
+}
+
 table {
 	border-collapse: collapse;
 	border: 1.5px white solid;
@@ -52,4 +77,13 @@ a:visited{
 }
 .disclaimer{
   text-align: center;
+}
+.topnav a:visited{
+  color: white;
+}
+.banner a:visited{
+  color:white;
+}
+.banner a:link{
+  text-decoration: none;
 }

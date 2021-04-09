@@ -27,8 +27,9 @@ con.connect(function(err) {
   console.log("MySQL Database (MariaDB)");
 })
 
+
 app.get('/', function(req, res, next){
-  var sql = 'SELECT * FROM papers';
+  let sql = 'SELECT * FROM papers';
   con.query(sql, function(err, data, fields){
     if (err) throw err;
     res.render('index', {title: 'Paper List', paperData: data});
@@ -37,7 +38,7 @@ app.get('/', function(req, res, next){
 
 // Catch all wrong paths
 app.get("*", function(req, res){
-  res.send("404 Page Not Found")
+res.send("404 Page Not Found")
 });
 
 // Listen on port 8080 for HTTP requests
