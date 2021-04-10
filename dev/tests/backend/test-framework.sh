@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Start db
 sudo systemctl start mysql && echo "[SUCCESS] Database started"
 sudo systemctl status mysql > db-status.log && echo -e "[SUCCESS] Database status\n"
 # Database test logins
@@ -7,9 +8,10 @@ user="trevalkov"
 pass="SecurePasswd!"
 db="Test"
 
+# Number of tests
 FLAG=0
 TOTAL=9
-
+# Function to load papers into db
 function loadPaper(){
   mkdir contributing
   cp ../../../db/database/contributing/page1.csv ./contributing/page1.csv
@@ -43,6 +45,7 @@ echo "Running $TOTAL tests..."
 
 # Setup database
 # Test load and connection
+# Database commands
 q="CREATE DATABASE IF NOT EXISTS Test;"
 mysql --user=$user --password=$pass -e "$q" && echo "2) Connected to MySQL/MariaDB" && FLAG=$((FLAG+1))
 q="DROP TABLE IF EXISTS papers;"
