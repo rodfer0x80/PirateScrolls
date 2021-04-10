@@ -73,3 +73,5 @@ id=$((id+1))
 echo $id > dump/.env
 
 sudo systemctl stop mysql 2>/dev/null && echo "[SUCCESS] Database stopped"
+
+diff pre-display.log post-display.log > diff.log
