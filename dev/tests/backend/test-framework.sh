@@ -1,11 +1,14 @@
 #!/bin/bash
 
 sudo systemctl start mysql && echo "[SUCCESS] Database started"
-sudo systemctl status mysql > db-status.log && echo "[SUCCESS] Database status"
+sudo systemctl status mysql > db-status.log && echo -e "[SUCCESS] Database status\n"
 # Database test logins
 user="trevalkov"
 pass="SecurePasswd!"
 db="Test"
+
+FLAG=0
+TOTAL=9
 
 function loadPaper(){
   mkdir contributing
@@ -34,28 +37,29 @@ do
   id=$line
 done < .env
 
+echo "Running $TOTAL tests..."
 # Test environment variable
-[ -z $id ] || echo "1) 1/2 Environment variable working"
+[ -z $id ] || echo "1) 1/2 Environment variable working" && FLAG=$((FLAG+1))
 
 # Setup database
 # Test load and connection
 q="CREATE DATABASE IF NOT EXISTS Test;"
-mysql --user=$user --password=$pass -e "$q" && echo "2) Connected to MySQL/MariaDB"
+mysql --user=$user --password=$pass -e "$q" && echo "2) Connected to MySQL/MariaDB" && FLAG=$((FLAG+1))
 q="DROP TABLE IF EXISTS papers;"
 mysql --user=$user --password=$pass $db -e "$q"
 mkdir dump
 cp ../../../db/database/dump/PirateScrolls1.sql dump/PirateScrolls1.sql
-mysql --user=$user --password=$pass Test < dump/PirateScrolls1.sql && echo "3) Loaded dump file" && rm -f dump/PirateScrolls1.sql
+mysql --user=$user --password=$pass Test < dump/PirateScrolls1.sql && echo "3) Loaded dump file" && FLAG=$((FLAG+1)) && rm -f dump/PirateScrolls1.sql
 # Test display, insert, delete and update
 q="SELECT * FROM papers"
 mysql --user=$user --password=$pass $db -e "$q" > pre-display.log
 q="UPDATE papers SET title = 'Test5' WHERE id = 1;"
-mysql --user=$user --password=$pass $db -e "$q" && echo "4) Updated papers"
+mysql --user=$user --password=$pass $db -e "$q" && echo "4) Updated papers" && FLAG=$((FLAG+1))
 q="DELETE FROM papers WHERE id = 3"
-mysql --user=$user --password=$pass $db -e "$q" && echo "5) Deleted paper"
-loadPaper && echo "6) Inserted paper"
+mysql --user=$user --password=$pass $db -e "$q" && echo "5) Deleted paper" && FLAG=$((FLAG+1))
+loadPaper && echo "6) Inserted paper" && FLAG=$((FLAG+1))
 q="SELECT * FROM papers"
-mysql --user=$user --password=$pass $db -e "$q" > post-display.log && echo "7) Displayed papers to post-display.log"
+mysql --user=$user --password=$pass $db -e "$q" > post-display.log && echo "7) Displayed papers to post-display.log" && FLAG=$((FLAG+1))
 
 # Dump and reset
 # Read env var
@@ -64,14 +68,19 @@ while read line
 do
   id=$line
 done < dump/.env
-[ -z $id ] || echo "8) 2/2 Environment variable working"
+[ -z $id ] || echo "8) 2/2 Environment variable working" && FLAG=$((FLAG+1))
 
 # Create numbered sql dump
-mysqldump --user=$user --password=$pass -R Test > dump/Test$id.sql && echo "9) Dumped database"
+mysqldump --user=$user --password=$pass -R Test > dump/Test$id.sql && echo "9) Dumped database" && FLAG=$((FLAG+1))
 [ -z dump/Test$id.sql ] && echo "[ERROR] Dumping database"
 id=$((id+1))
 echo $id > dump/.env
 
-sudo systemctl stop mysql 2>/dev/null && echo "[SUCCESS] Database stopped"
-
+# Difference before and after running sql commands
 diff pre-display.log post-display.log > diff.log
+
+echo "[INFO] Passed $FLAG/$TOTAL tests!"
+
+sudo systemctl stop mysql 2>/dev/null && echo -e "\n[SUCCESS] Database stopped\n"
+
+
