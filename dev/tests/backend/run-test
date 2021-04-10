@@ -1,0 +1,13 @@
+#!/bin/bash
+while [ 1 ]
+do
+  echo -e "\n\nPirateScrolls - Testing framework"
+  echo "***********************************"
+  echo "0) Quit Program"
+  echo "1) Start testing"
+  echo "2) Clean up after testing"
+  read -p ">> " c
+  [ "$c" == 0 ] && echo "Gracefully quitting..." && exit
+  [ "$c" == 1 ] && echo -e "\n\n" && ./test-framework.sh
+  [ "$c" == 2 ] && echo -e "\n\n" && ./cleanup.sh
+done

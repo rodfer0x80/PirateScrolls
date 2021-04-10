@@ -9,33 +9,31 @@ do
   echo "3) Enable database on reboot"
   echo "4) Disable database on reboot"
   echo "5) Check database status"
-  echo "6) Check database port"
+  echo "6) Check database network configurations"
   echo "7) Dump database"
   echo "8) Load database"
-  echo "9) Secure installation"
+  echo "9) Reset database"
+  echo "10) Secure installation"
   read -p ">> " c
-  if [ "$c" == 0 ];then
-    echo "Gracefully quitting..."
-    exit
-  elif [ "$c" == 1 ];then
-    sudo systemctl start mysql
-  elif [ "$c" == 2 ];then
-    sudo systemctl stop mysql
-  elif [ "$c" == 3 ];then
-    sudo systemctl enable mysql
-  elif [ "$c" == 4 ];then
-    sudo systemctl disable mysql
-  elif [ "$c" == 5 ];then
-    sudo systemctl status mysql
-  elif [ "$c" == 6 ];then
-    sudo netstat -ltpn | grep mariadb
-  elif [ "$c" == 7 ];then
-    ./dump_db.sh
-  elif [ "$c" == 8 ];then
-    ./load_db.sh
-  elif [ "$c" == 9 ];then
-    sudo mysql_secure_installation
-  else
-    echo "Command not found, quitting..."
-  fi
+  [ "$c" == 0 ] && echo "Gracefully quitting..." && exit
+  # Daemonise mysql server (start server on as &process)
+  [ "$c" == 1 ] && sudo systemctl start mysql
+  # Stop process
+  [ "$c" == 2 ] && sudo systemctl stop mysql
+  # Enable mysql on startup
+  [ "$c" == 3 ] && sudo systemctl enable mysql
+  # Disable mysql on startup
+  [ "$c" == 4 ] && sudo systemctl disable mysql
+  # Check mysql daemon status
+  [ "$c" == 5 ] && sudo systemctl status mysql
+  # Display mariadb networking related information
+  [ "$c" == 6 ] && sudo netstat -ltpn | grep mariadb
+  # Create sql dump  at /dump
+  [ "$c" == 7 ] && ./dump_db.sh
+  # Load sql dump to PirateScrolls table from /dump
+  [ "$c" == 8 ] && ./load_db.sh
+  # Reset auto_increment id and env var (for development)
+  [ "$c" == 9 ] && ./reset_id.sh
+    # Use mysql secure installation script to configure settings
+  [ "$c" == 10 ] && sudo mysql_secure_installation
 done

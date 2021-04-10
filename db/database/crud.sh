@@ -11,22 +11,13 @@ do
   echo "3) Update paper"
   echo "4) Display papers"
   read -p ">> " c
-  if [ "$c" == 0 ];then
-    echo "Gracefully quitting..."
-    exit
-  elif [ "$c" == 1 ];then
-    echo -e "\n\n"
-    ./insert_db.sh
-  elif [ "$c" == 2 ];then
-    echo -e "\n\n"
-    ./delete_db.sh
-  elif [ "$c" == 3 ];then
-    echo -e "\n\n"
-    ./update_db.sh
-  elif [ "$c" == 4 ];then
-    echo -e "\n\n"
-    ./display_db.sh
-  else
-    echo "Command not found."
-  fi
+  [ "$c" == 0 ] && echo "Gracefully quitting..." && exit
+  # Insert paper into database using contributing folder with pdf and csv info
+  [ "$c" == 1 ] && echo -e "\n\n" && ./insert_db.sh
+  # Delete paper by ID
+  [ "$c" == 2 ] && echo -e "\n\n" && ./delete_db.sh
+  # Update information by ID
+  [ "$c" == 3 ] && echo -e "\n\n" && ./update_db.sh
+  # Print papers table
+  [ "$c" == 4 ] && echo -e "\n\n" && ./display_db.sh
 done

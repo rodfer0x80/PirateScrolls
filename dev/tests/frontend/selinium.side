@@ -1,0 +1,231 @@
+{
+  "id": "756b39f2-986b-40c2-8d59-850b4f1ee251",
+  "version": "2.0",
+  "name": "PirateScrolls",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "4d472bca-1f28-4201-b3b6-4d2b2f246b11",
+    "name": "Untitled",
+    "commands": [{
+      "id": "6fda3923-0800-441c-8f25-36631d67dcf3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91a2d29f-0d19-4bea-8e43-1681fa5f550f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f48bc67-5ad3-44c2-a343-78a0fd123d72",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Contact",
+      "targets": [
+        ["linkText=Contact", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://github.com/trevalkov')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "20feae37-838f-4820-9024-238e97098921",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "954953f1-8adb-461a-8619-4f5222b42cc2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=About",
+      "targets": [
+        ["linkText=About", "linkText"],
+        ["css=.topnav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#about')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ceb4ca2f-9689-44fc-9da0-2495ee80f515",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=PirateScrolls",
+      "targets": [
+        ["linkText=PirateScrolls", "linkText"],
+        ["css=h1 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'PirateScrolls')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080']", "xpath:href"],
+        ["xpath=//h1/a", "xpath:position"],
+        ["xpath=//a[contains(.,'PirateScrolls')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa586e2f-c4ef-496d-b839-1f81bd36404b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Contact",
+      "targets": [
+        ["linkText=Contact", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://github.com/trevalkov')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8126905-0cb3-40fe-b1e5-3151a2286d14",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contact",
+      "targets": [
+        ["linkText=Contact", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://github.com/trevalkov')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f458616c-d0d3-4511-93f0-1eb1d2fec92b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03a12285-404e-4201-bffa-798b746b84f1",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,153)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "104c6d50-a206-4b44-8ed7-ffa50f8079eb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=GitHub",
+      "targets": [
+        ["linkText=GitHub", "linkText"],
+        ["css=li > a", "css:finder"],
+        ["xpath=//a[contains(text(),'GitHub')]", "xpath:link"],
+        ["xpath=//a[@href='http://github.com/trevalkov']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'GitHub')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01ed98a5-03be-4899-8054-c3a7f82a475c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a30efa0-9a37-4646-966a-f4d62308669e",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'\"A Review Paper on Network Security and Cryptography\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e64e01a-60dd-4e7b-a06c-bd32210f361d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=\"A Review Paper on Network Security and Cryptography\"",
+      "targets": [
+        ["linkText=\"A Review Paper on Network Security and Cryptography\"", "linkText"],
+        ["css=tr:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'\"A Review Paper on Network Security and Cryptography\"')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/files/paper1.pdf')]", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'\"A Review Paper on Network Security and Cryptography\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0500b75-2ebc-4aee-999c-86b2517024ad",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a3a7a3a-69c9-45d0-819b-84a5d35e0a33",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=\"Report on Post-Quantum Cryptography\"",
+      "targets": [
+        ["linkText=\"Report on Post-Quantum Cryptography\"", "linkText"],
+        ["css=tr:nth-child(2) a", "css:finder"],
+        ["xpath=//a[contains(text(),'\"Report on Post-Quantum Cryptography\"')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/files/paper2.pdf')]", "xpath:href"],
+        ["xpath=//tr[2]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'\"Report on Post-Quantum Cryptography\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae801374-2f85-4170-ac6e-088b26f7167d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9b53041-776e-422f-8c57-406711aa0a22",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,255)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d293fc71-0aa5-4d6b-b8ea-929ff903cc03",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=\"Deep Residual Learning for Image Recognition\"",
+      "targets": [
+        ["linkText=\"Deep Residual Learning for Image Recognition\"", "linkText"],
+        ["css=tr:nth-child(3) a", "css:finder"],
+        ["xpath=//a[contains(text(),'\"Deep Residual Learning for Image Recognition\"')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/files/paper3.pdf')]", "xpath:href"],
+        ["xpath=//tr[3]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'\"Deep Residual Learning for Image Recognition\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "469b925e-7cde-4bb1-80c5-2c03929eb6a0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "62c5f04a-5eee-4516-9730-011a7926dd72",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4d472bca-1f28-4201-b3b6-4d2b2f246b11"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
