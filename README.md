@@ -12,6 +12,8 @@ Born to provide online academic papers without ads, tracking or bloat web design
 
 Project
 
+1. Motivation
+
 To index the world OSINT
 
     This project is Open Source and is available at GitHub
@@ -24,10 +26,9 @@ Nodejs and npm
 MariaDB/MySQL
 GNU tools
 \nBash/Shell/ZShell2. Project Description
-2.1 Design
+2.Design
 Design purpose: Simple page to serve online academic publications in pdf format.
 
-Design:
 app.js - main, connect to database and serve papers to the page
 public - files :: pdf papers; stylesheets :: css sheet
 views - ejs files (index, partials/header, partials/footer)
@@ -38,7 +39,7 @@ database - bash scripts manage and configure database
 Dev:
 admin - notes :: Linux commands, GNU utilities and database commands; tests :: frontend and backend tests, backend use run-test script to test or reset database
 
-2.2 Implementation
+3. Implementation
 Back-end features
 Database automation.
 Test and run database functionality with CLI bash scripts running shell and GNU utilities. 
@@ -52,10 +53,7 @@ Table of contents - papers in pdf format open in browser or download
 About - about project
 GitHub - link to the project
 
-\n(javascript only to query database, run server and request data from database to the client)
-
--- Control
-:: The control folder holds the scripts: //run -- starts server :: nodemon app.js //database_cms -- manage database :: CRUD CLI interface //admin_cms -- run database functions :: database commands in shell 
+(javascript only to query database, run server and request data from database to the client)
 
 -- Dependencies
 :: Nodejs npm dependencies can be found at package.json
