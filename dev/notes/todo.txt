@@ -1,3 +1,0 @@
-:: Todo
-1. Javascript, HTML and CSS testing
-2. Project report
