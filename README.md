@@ -23,8 +23,35 @@ To index the world OSINT
 Nodejs and npm
 MariaDB/MySQL
 GNU tools
-\nBash/Shell/ZShell
-\nPython2 or Python3 (can also run without python so it is not required)
+\nBash/Shell/ZShell2. Project Description
+2.1 Design
+Design purpose: Simple page to serve online academic publications in pdf format.
+
+Design:
+app.js - main, connect to database and serve papers to the page
+public - files :: pdf papers; stylesheets :: css sheet
+views - ejs files (index, partials/header, partials/footer)
+Db:
+admin - papers_setup :: compress/decompress and setup papers to the correct folders; crud_db :: insert, delete, update and select from database menu (bash); admin_db :: admin database management controls
+database - bash scripts manage and configure database
+
+Dev:
+admin - notes :: Linux commands, GNU utilities and database commands; tests :: frontend and backend tests, backend use run-test script to test or reset database
+
+2.2 Implementation
+Back-end features
+Database automation.
+Test and run database functionality with CLI bash scripts running shell and GNU utilities. 
+Load pdf plus csv file with information as described in contributing/template with a simple bash script into the database with a few keystrokes.
+Run-test tests database functionality with a bash script.
+Compress and decompress pdf for portability using 7z.
+
+Front-end interaction
+Single page using EJS
+Table of contents - papers in pdf format open in browser or download
+About - about project
+GitHub - link to the project
+
 \n(javascript only to query database, run server and request data from database to the client)
 
 -- Control
