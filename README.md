@@ -20,12 +20,6 @@ To index the world OSINT
     Developed by trevalkov
 
 *********************************************************************************************************************************
--- Stack: (will expand the explanation soon)
-:: Server side
-Nodejs and npm
-MariaDB/MySQL
-GNU tools
-\nBash/Shell/ZShell2. Project Description
 2.Design
 Design purpose: Simple page to serve online academic publications in pdf format.
 
