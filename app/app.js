@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const path = require('path');
+const http = require('http');
 const https = require('https');
 const fs = require('fs');
 
@@ -48,10 +49,15 @@ res.send("404 Page Not Found")
 //  if (err) throw err;
 //  console.log("\nServer running at: http://localhost:${PORT}/");
 //});
+// Listen both http & https ports
+const httpServer = http.createServer(app);
 const httpsServer = https.createServer({
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem'),
+  key: fs.readFileSync('/etc/letsencrypt/live/trevalkov.xyz/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/trevalkov.xyz/fullchain.pem'),
 }, app);
+httpServer.listen(80, () => {
+    console.log('HTTP Server running on port 80');
+});
 httpsServer.listen(443, () => {
     console.log('HTTPS Server running on port 443');
 });
