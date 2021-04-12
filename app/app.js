@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const path = require('path');
+const https = require('https');
+const fs = require('fs');
 
 const app = express();
 app.use(bodyParser.json());
@@ -42,7 +44,14 @@ res.send("404 Page Not Found")
 });
 
 // Listen on port 8080 for HTTP requests
-app.listen(8080, function(err){
-  if (err) throw err;
-  console.log("\nHTTP Serving on PORT 8080");
+//app.listen(PORT, function(err){
+//  if (err) throw err;
+//  console.log("\nServer running at: http://localhost:${PORT}/");
+//});
+const httpsServer = https.createServer({
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem'),
+}, app);
+httpsServer.listen(443, () => {
+    console.log('HTTPS Server running on port 443');
 });
