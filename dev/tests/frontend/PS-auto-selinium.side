@@ -1,0 +1,175 @@
+{
+  "id": "c9a0a887-75c7-4835-aa1c-976ff57d119e",
+  "version": "2.0",
+  "name": "PirateScrolls",
+  "url": "https://localhost",
+  "tests": [{
+    "id": "fea17c48-5948-4314-8200-a870a298bcfe",
+    "name": "piratescrolls-simplke",
+    "commands": [{
+      "id": "09c996fa-6b6a-4c9a-a584-121f567ff38d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e25336bb-b71b-4fef-882f-85fd357f362e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "805x694",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2771671b-433a-4521-9247-3bb01d28624d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Papers",
+      "targets": [
+        ["linkText=Papers", "linkText"],
+        ["css=.topnav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Papers')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Papers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77ea2880-a888-48d5-9b53-c15817dc777b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=About",
+      "targets": [
+        ["linkText=About", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/about')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "319885b9-fa6a-4573-b547-df357a52e456",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contact",
+      "targets": [
+        ["linkText=Contact", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://github.com/trevalkov')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2d72a6c-bcf7-4e04-bae5-6bd6be31dbfc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a87efcd-b6fd-46fb-b408-a61c6b3cc934",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8acbbcf2-3e9c-4987-8c7f-bba2255db7aa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=\"A Review Paper on Network Security and Cryptography\"",
+      "targets": [
+        ["linkText=\"A Review Paper on Network Security and Cryptography\"", "linkText"],
+        ["css=tr:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'\"A Review Paper on Network Security and Cryptography\"')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/files/paper1.pdf')]", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'\"A Review Paper on Network Security and Cryptography\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eee3ecac-e89a-4a28-80a6-4787da5f5114",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7eb8253-4487-41a0-88d8-ab053724ac06",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=\"Report on Post-Quantum Cryptography\"",
+      "targets": [
+        ["linkText=\"Report on Post-Quantum Cryptography\"", "linkText"],
+        ["css=tr:nth-child(2) a", "css:finder"],
+        ["xpath=//a[contains(text(),'\"Report on Post-Quantum Cryptography\"')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/files/paper2.pdf')]", "xpath:href"],
+        ["xpath=//tr[2]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'\"Report on Post-Quantum Cryptography\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a14f280-6a69-4472-b0a9-df0329425366",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b329d5b-9e98-46ec-aae1-4cd81b790a7b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e279cc70-b1cf-4df4-ac13-238ddb8fedf1",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'\"Deep Residual Learning for Image Recognition\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d379398-b010-49e2-bf9b-18afa2c25bbd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=\"Deep Residual Learning for Image Recognition\"",
+      "targets": [
+        ["linkText=\"Deep Residual Learning for Image Recognition\"", "linkText"],
+        ["css=tr:nth-child(3) a", "css:finder"],
+        ["xpath=//a[contains(text(),'\"Deep Residual Learning for Image Recognition\"')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/files/paper3.pdf')]", "xpath:href"],
+        ["xpath=//tr[3]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'\"Deep Residual Learning for Image Recognition\"')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51e0474a-8643-49df-8fe6-fc7fab0b6de0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "df12a7b6-3f2a-4480-92b4-201eee0d4b1b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fea17c48-5948-4314-8200-a870a298bcfe"]
+  }],
+  "urls": ["https://localhost/"],
+  "plugins": []
+}
