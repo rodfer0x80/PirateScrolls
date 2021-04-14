@@ -39,6 +39,10 @@ app.get('/', function(req, res, next){
   });
 });
 
+app.get('/about', function(req, res, next){
+  res.render('about');
+})
+
 // Catch all wrong paths
 app.get("*", function(req, res){
 res.send("404 Page Not Found")
@@ -52,8 +56,8 @@ res.send("404 Page Not Found")
 // Listen both http & https ports
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer({
-  key: fs.readFileSync('/etc/letsencrypt/live/trevalkov.xyz/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/trevalkov.xyz/fullchain.pem'),
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem'),
 }, app);
 httpServer.listen(80, () => {
     console.log('HTTP Server running on port 80');

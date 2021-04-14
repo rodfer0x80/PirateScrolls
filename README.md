@@ -5,7 +5,7 @@ Website for academic papers, only papers, no tracking, no web bloating, no ads.
 
 Born to provide online academic papers without ads, tracking or bloat web design.
 
-    All respect is due to the authors of such academic papers and publications.
+    Copyright of distributed papers belong to the authors of such publications.
     All papers are in pdf format published online by the author(s)
     You can find the author and organisations involved in the paper in the table of contents and inside pdf the file.
 
@@ -36,7 +36,7 @@ admin - notes :: Linux commands, GNU utilities and database commands; tests :: f
 3. Implementation
 Back-end features
 Database automation.
-Test and run database functionality with CLI bash scripts running shell and GNU utilities. 
+Test and run database functionality with CLI bash scripts running shell and GNU utilities.
 Load pdf plus csv file with information as described in contributing/template with a simple bash script into the database with a few keystrokes.
 Run-test tests database functionality with a bash script.
 Compress and decompress pdf for portability using 7z.
