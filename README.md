@@ -1,5 +1,5 @@
 # PirateScrolls
-Website for academic papers, only papers, no tracking, no web bloating, no ads, decentralized hosting.
+Web application for academic papers, only papers, no tracking, no web bloating, no ads, decentralized hosting.
 
  About this site
 
